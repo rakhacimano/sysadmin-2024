@@ -3,6 +3,7 @@
     Kelas		        : 2 D4 IT A
     Mata Kuliah	        : Workshop Administrasi Jaringan
     Dosen Pengampu	        : Dr. Ferry Astika Saputra S.T., M.Sc
+    Anggota Kelompok : Rakha Putra Pratama, Diah Aulia Kusuma Putri, Dukhaan Kamimpangan
 
 # TUGAS 1
 
