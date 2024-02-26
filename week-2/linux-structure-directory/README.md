@@ -13,6 +13,8 @@
    <p><strong>Gambar 1:</strong>Linux Directory Structure</p>
 </div>
 
+</br>
+
 ```bash
 /
 ├── boot
