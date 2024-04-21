@@ -152,7 +152,10 @@ Dr. Ferry Astika Saputra S.T., M.Sc
    sudo named-checkzone 0.0.10.inaddr-arpa /var/lib/bind/db.kelompok4.local.inv
    ```
 
-   <!-- ![Check](assets/ss-check.png) -->
+   <div align="center">
+    <img src="./assets/check-error-configure.png">
+    <p><strong>Gambar 1:</strong>Check Error Configure</p>
+    </div>
 
 2. Restart BIND9:
 
