@@ -30,7 +30,7 @@ Dr. Ferry Astika Saputra S.T., M.Sc
    ```
 
    ```bash
-    acl internals { 127.0.0.0/8; 10.0.0.0/16; };
+    acl internals { 127.0.0.0/8; 192.168.0.0/16; };
 
     include "/etc/bind/named.conf.options";
     controls {
@@ -96,7 +96,7 @@ Dr. Ferry Astika Saputra S.T., M.Sc
    ```bash
    $TTL    3600
    @       IN      SOA     ns.kelompok4.local. root.kelompok4.local. (
-                     2024031901            ; Serial
+                     2024042101            ; Serial
                            3600            ; Refresh [1h]
                             600            ; Retry   [10m]
                           86400            ; Expire  [1d]
@@ -105,7 +105,7 @@ Dr. Ferry Astika Saputra S.T., M.Sc
    @       IN      NS      ns.kelompok4.local.
    @       IN      MX      10 ns.kelompok4.local.
 
-   ns      IN      A       10.0.2.15
+   ns      IN      A       192.168.18.10
 
    www     IN      CNAME   ns
    mail    IN      CNAME   ns
@@ -120,7 +120,7 @@ Dr. Ferry Astika Saputra S.T., M.Sc
    ```bash
    $TTL    3600
    @       IN      SOA     ns.kelompok4.local. root.kelompok4.local. (
-                     2024031902           ; Serial
+                     2024042102           ; Serial
                            3600           ; Refresh [1h]
                             600           ; Retry   [10m]
                           86400           ; Expire  [1d]
@@ -128,7 +128,7 @@ Dr. Ferry Astika Saputra S.T., M.Sc
    ;
    @       IN      NS      ns.kelompok4.local.
 
-   15      IN      PTR     ns.kelompok4.local.
+   10      IN      PTR     ns.kelompok4.local.
    ```
 
 6. Edit file `/etc/resolv.conf` :
@@ -139,7 +139,9 @@ Dr. Ferry Astika Saputra S.T., M.Sc
 
    ```bash
    search kelompok4.local
-   nameserver 10.0.2.15
+   nameserver 192.168.18.10
+   nameserver 10.10.10.1
+   nameserver 202.9.85.3
    ```
 
 ### Step 4: Check configuration & Restart BIND9
@@ -153,9 +155,9 @@ Dr. Ferry Astika Saputra S.T., M.Sc
    ```
 
    <div align="center">
-    <img src="./assets/check-error-configure.png">
-    <p><strong>Gambar 1:</strong>Check Error Configure</p>
-    </div>
+      <img src="./assets/check-error.jpg">
+      <p><strong>Gambar 1:</strong>Check Error Configure</p>
+   </div>
 
 2. Restart BIND9:
 
@@ -169,7 +171,10 @@ Dr. Ferry Astika Saputra S.T., M.Sc
    sudo systemctl status bind9
    ```
 
-   <!-- ![Status](assets/ss-status.png) -->
+   <div align="center">
+      <img src="./assets/check-status.jpg">
+      <p><strong>Gambar 2:</strong>Check Status BIND</p>
+   </div>
 
 4. Test DNS setup
 
@@ -178,4 +183,7 @@ Dr. Ferry Astika Saputra S.T., M.Sc
    dig
    ```
 
-   <!-- ![Status](assets/ss-dig.png) -->
+   <div align="center">
+      <img src="./assets/dig.jpg">
+      <p><strong>Gambar 3:</strong>Dig</p>
+   </div>
