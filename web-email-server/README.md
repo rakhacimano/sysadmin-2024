@@ -69,16 +69,15 @@ Dr. Ferry Astika Saputra S.T., M.Sc
    ```bash
    vi /etc/apache2/apache2.conf
     # line 70 : add to specify server name
-    ServerName www. kelompok11.com
+    ServerName www. kelompok4.com
    ```
 
    ```bash
    vi /etc/apache2/sites-enabled/000-default.conf
     # line 11 : change to webmaster's email
-    ServerAdmin webmaster@kelompok11.com
+    ServerAdmin webmaster@kelompok4.com
     systemctl reload apache2
    ```
-<!-- 
 3. Melakukan test ke web browser
 
 4. Install PHP 8.2
@@ -218,9 +217,9 @@ Dr. Ferry Astika Saputra S.T., M.Sc
     # line 82 : uncomment
     mail_owner = postﬁx
     # line 98 : uncomment and specify hostname
-    myhostname = mail.kelompok11.local
+    myhostname = mail.kelompok4.local
     # line 106 : uncomment and specify domainname
-    mydomain = kelompok11.local
+    mydomain = kelompok4.local
     # line 127 : uncomment
     myorigin = $mydomain
     # line 141 : uncomment
@@ -351,12 +350,13 @@ Dr. Ferry Astika Saputra S.T., M.Sc
    systemctl restart dovecot
    ```
 
-### FINAL CHECK untuk semua SERVICES :
+### Check untuk semua Services :
 
 Akan terlihat hasilnyaseperti dibawah, dengan status Server (LISTEN) : MariaDB(MySQL), IMAP, POP3, DNS(domain), IMAPS, POP3S, SSH, Postﬁx (SMTP)
 
 Melakukan Cek terhadap Layanan Posﬁx
 
 ```bash
-telnet mail.kelompok11.local 25
+telnet mail.kelompok4.local 25
 ``` -->
+<!-- 
