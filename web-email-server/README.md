@@ -45,6 +45,7 @@ Dr. Ferry Astika Saputra S.T., M.Sc
    ```bash
    timedatectl
    ```
+   ![Timedatectl](assets/ss-waktu.png)
 
 ## Apache 2 + PHP-FM
 
@@ -78,7 +79,10 @@ Dr. Ferry Astika Saputra S.T., M.Sc
     ServerAdmin webmaster@kelompok4.com
     systemctl reload apache2
    ```
+
 3. Melakukan test ke web browser
+
+   ![Test apache](assets/apache2mockup.png)
 
 4. Install PHP 8.2
 
@@ -157,6 +161,8 @@ Dr. Ferry Astika Saputra S.T., M.Sc
    echo '<?php phpinfo(); ?>' > /var/www/html/info.php
    ```
 8. Lalu lakukan test di browser
+
+   ![Test php](assets/info.php.png)
 
 ## Database System : MariaDB
 
@@ -350,13 +356,14 @@ Dr. Ferry Astika Saputra S.T., M.Sc
    systemctl restart dovecot
    ```
 
-### Check untuk semua Services :
+### FINAL CHECK untuk semua SERVICES :
 
 Akan terlihat hasilnyaseperti dibawah, dengan status Server (LISTEN) : MariaDB(MySQL), IMAP, POP3, DNS(domain), IMAPS, POP3S, SSH, Postﬁx (SMTP)
+
+![final cek](assets/net_stat.png)
 
 Melakukan Cek terhadap Layanan Posﬁx
 
 ```bash
 telnet mail.kelompok4.local 25
-``` -->
-<!-- 
+```
