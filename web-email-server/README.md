@@ -82,7 +82,7 @@ Dr. Ferry Astika Saputra S.T., M.Sc
 
 3. Melakukan test ke web browser
 
-   ![Test apache](assets/apache2mockup.png)
+   ![apache test browser](assets/test-browser.png)
 
 4. Install PHP 8.2
 
@@ -360,10 +360,12 @@ Dr. Ferry Astika Saputra S.T., M.Sc
 
 Akan terlihat hasilnyaseperti dibawah, dengan status Server (LISTEN) : MariaDB(MySQL), IMAP, POP3, DNS(domain), IMAPS, POP3S, SSH, Postﬁx (SMTP)
 
-![final cek](assets/net_stat.png)
+![final cek](assets/netstat.png)
 
 Melakukan Cek terhadap Layanan Posﬁx
 
 ```bash
 telnet mail.kelompok4.local 25
 ```
+
+![send message](assets/send-message.png)
